@@ -1144,6 +1144,10 @@ cursor_process_button_press(struct seat *seat, uint32_t button, uint32_t time_ms
 	/* Used on next button release to check if it can close menu or select menu item */
 	press_msec = time_msec;
 
+	if (ctx.view && ctx.view->title && strcmp(ctx.view->title, "focus_disabled_window") == 0) {
+    	return false;
+	}
+
 	if (ctx.view || ctx.surface) {
 		/* Store cursor context for later action processing */
 		cursor_context_save(&seat->pressed, &ctx);
