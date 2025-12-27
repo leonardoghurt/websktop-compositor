@@ -1,3 +1,3 @@
-Websktop Compositor is the compositor of the Websktop Desktop Environment
+LúminaWay Compositor is the compositor of LúminaWay
 
 It's based on LabWC
